@@ -110,7 +110,7 @@ h1 {
 }
 
 /* iphone */
-@media (max-width: 450px) { 
+@media (max-width: 991px) { 
 	.col-x-1, .col-x-2, .col-x-3, .col-x-4, .col-x-5, .col-x-6, .col-x-7, .col-x-8, .col-x-9, .col-x-10, .col-x-11, .col-x-12 {
 	float: left;
 	border: 1px solid blue;
