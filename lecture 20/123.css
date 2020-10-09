@@ -67,7 +67,7 @@ h1 {
 
 /* Middle size pages */
 @media (min-width: 992px) and (max-width: 1199px) {
-	.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8., .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+	.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
 		float: left;
 		border: 1px solid green;
 	}
@@ -106,5 +106,49 @@ h1 {
 	}
 	.col-md-12 {
 		width: 100%
+	}
+}
+
+/* iphone */
+@media (max-width: 376px) { 
+	.col-x-1, .col-x-2, .col-x-3, .col-x-4, .col-x-5, .col-x-6, .col-x-7, .col-x-8, .col-x-9, .col-x-10, .col-x-11, .col-x-12 {
+	float: left;
+	border: 1px solid blue;
+	}
+	.col-x-1 {
+		width: 8.33%;
+	}
+	.col-x-2 {
+		width: 16.66%;
+	}
+	.col-x-3 {
+		width: 25%;
+	}
+	.col-x-4 {
+		width: 33.33%;
+	}
+	.col-x-5 {
+		width: 41.66%;
+	}
+	.col-x-6 {
+		width: 50%;
+	}
+	.col-x-7 {
+		width: 58.33%
+	}
+	.col-x-8 {
+		width: 66.66%
+	}
+	.col-x-9 {
+		width: 75%;
+	}
+	.col-x-10 {
+		width: 83.33%;
+	}
+	.col-x-11 {
+		width: 91.66%;
+	}
+	.col-x-12 {
+		width: 100%;
 	}
 }
