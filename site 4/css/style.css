@@ -165,6 +165,58 @@ section {
   line-height: 5rem;
   color: #1a1820;
 }
+.section-header {
+  font-family: 'ProximaNova_bold', sans-serif;
+  text-align: center;
+  font-size: 3.6rem;
+  margin-bottom: 10rem;
+  margin-top: 0rem;
+}
+/*Оформление секции с преимуществами*/
+.features-block {
+  text-align: center;
+}
+.features-block h3 {
+  font-style: 2rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+  margin-bottom: 2rem;
+}
+.features-block p {
+  font-size: 1.4rem;
+  display: inline-block;
+  width: 80%;
+}
+.features-img {
+  height: 8rem;
+  margin-bottom: 3rem;
+}
+.features-img img {
+  display: block;
+  margin: 0 auto;
+}
+.slick-active {
+  outline: none;
+}
+.arrow {
+  position: absolute;
+  z-index: 99;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  border: none;
+}
+.prev {
+  left: 0;
+  background: url(../img/left-chevron.svg) center no-repeat;
+  background-size: 100%;
+}
+.next {
+  right: 0;
+  background: url(../img/left-arrow.svg) center no-repeat;
+  background-size: 100%;
+}
 @media (max-width: 991px) {
   .phone-block {
     text-align: center;
