@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -20,7 +19,7 @@
   </head>
 
   <body>
-
+<!-- Главная страница -->
   <main class="main">
   	<div class="container">
   		<div class="header">
@@ -39,7 +38,7 @@
   			<div class="col-lg-3 col-md-4 col-sm-12">
   				<div class="wrap">
   					<div class="wrap-block">
-  						<button class="button header-btn">
+  						<button class="button header-btn popup-btn">
   					Получить консультацию
   						</button>
   					</div>
@@ -79,9 +78,10 @@
    		</div>
   	</div>
   </main>
+  <!-- Преимущества -->
     <section class="features">
       <div class="container">
-        <h2 class="section-header">Преимущество работы с нами</h2>
+        <div class="section-header"><h2>Преимущество работы с нами</h2></div>
         <div class="features-slider">
           <!-- Первое преимущество -->
           <div class="features-block">
@@ -131,7 +131,90 @@
         </div>
       </div>
     </section>
-   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<!-- Цены -->
+    <section class="price">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 offset-lg-4 ">
+            <div class="section-header section-header_light">
+              <h2>Цены</h2>
+              <p>Выберите вариант, который подходит Вам:</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="price-button">
+              <button class="button price-header-btn" data-toggle="modal">Рассчитать точную стоимость</button>
+            </div>
+          </div>
+        </div><!-- row -->
+        <div class="row">
+          <div class="col-lg-4 offset-lg-0 col-md-8 offset-md-2">
+            <div class="price-block">
+              <h4>Штукатурка вашим <br>материалом</h4>
+              <img src="img/prices1.jpg" alt=""><span class="price-tag">от 300 руб/м<sup>2</sup></span>
+              <ul class="price-list price-list-lag">
+                <li>Проведение работ</li>
+                <li>Уборка</li>
+              </ul>
+              <button class="button button-order">Заказать</button>
+            </div>
+          </div>
+          <div class="col-lg-4 offset-lg-0 col-md-8 offset-md-2">
+            <div class="price-block">
+              <h4>Штукатурка под <br>шпаклевку</h4>
+              <img src="img/prices2.jpg" alt=""><span class="price-tag">от 530 руб/м<sup>2</sup></span>
+              <ul class="price-list price-list-lag">
+                <li>Завоз материала и его объем</li>
+                <li>Проведение работ</li>
+                <li>Уборка</li>
+                <li>Гарантия 2 года</li>
+              </ul>
+              <button class="button button-order">Заказать</button>
+            </div>
+          </div>
+          <div class="col-lg-4 offset-lg-0 col-md-8 offset-md-2">
+            <div class="price-block">
+              <h4 class="title3">Штукатурка под обои</h4>
+              <img class="img3" src="img/prices3.jpg" alt=""><span class="price-tag">от 560 руб/м<sup>2</sup></span>
+              <ul class="price-list">
+                <li>Завоз материала и его объем</li>
+                <li>Проведение работ</li>
+                <li>Уборка</li>
+                <li>Гарантия 2 года</li>
+                <li>Можно сразу клеить обои</li>
+              </ul>
+              <button class="button button-order">Заказать</button>
+            </div>
+          </div>
+        </div>
+           </div><!-- row -->
+    </section>
+<!-- Модальные окна -->
+<!-- Получить консултацию -->
+<div class="popup">
+  <!-- Само белое модальное окно -->
+  <div class="popup-dialog">
+    <!-- Содержимое модальное окно -->
+    <div class="popup-content">
+      <button class="popup-close">&times;</button>
+        <h4 class="popup-header">Заинтересовало?</h4>
+        <p>Оставьте свои контактые данные <br>для связи</p>
+        <div class="main-form popup-form">
+          <form action="#">
+            <label for="#">Ваше имя</label>
+            <input class="main-form-input" type="text">
+            <label for="#">Номер телефона</label>
+            <input class="main-form-input" type="text">
+            <label for="#">Сообщение</label>
+            <textarea class="main-form-input" rows="5"></textarea>
+            <button class="main-form-btn button" type="submit">Оставьте заявку</button>
+          </form>
+        </div>
+    </div>
+  </div>
+</div>
+
+   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
    <link rel="stylesheet" href="slick/slick.css">
    <link rel="stylesheet" href="slick/slick-theme.css">
@@ -140,6 +223,14 @@
     <!-- Инициализация слайдера -->
     <script type="text/javascript">
         $(document).ready(function(){
+  $('.popup-btn').on('click', function(event) {
+    event.preventDefault();
+    $('.popup').fadeIn();
+          });
+  $('.popup-close').on('click', function(event) {
+    event.preventDefault();
+    $('.popup').fadeOut();
+  });
           $('.features-slider').slick({
             infinite: true,
             slidesToShow: 4,
